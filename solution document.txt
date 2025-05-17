@@ -1,0 +1,41 @@
+Problem statement :
+
+Create two databases and an API that fetches data from both and returns a combined response. The setup will include :
+1.Two databases :
+  a. employees_db : stores employee details
+  b. products_db : stores product details
+
+************************************************************************************************************************
+
+Commands to create a databases :
+
+1. CREATE DATABASE EMPLOYEES_DB
+2. CREATE DATABASE PRODUCTS_DB
+
+****************************************************
+-------------------------------------------
+EMPLOYEES_DB TABLE			  |
+-------------------------------------------
+EMPLOYEE_ID | EMPLOYEE_NAME | DESIGNATION |
+-------------------------------------------
+1           | SANJEEVA 	    | CONSULTANT  |
+2           | KUMAR 	    | ANALYST     |
+-------------------------------------------
+
+
+-------------------------------------------
+PRODUCTS_DB TABLE			  |
+-------------------------------------------
+PRODUCT_ID  | EMPLOYEE_ID   | PRODUCT_WORK|
+-------------------------------------------
+1           | 1 	    | SAP         |
+2           | 2 	    | SALES_FORCE |     
+-------------------------------------------
+
+******************************************************
+Query : 
+
+select employees_db.employee_name, 
+	employees_db.designation,
+	products_db.product_work from employees_db join products.db 
+	where employees_db.employee_id = products_db.employee_id
